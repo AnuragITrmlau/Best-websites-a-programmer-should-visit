@@ -1,1 +1,51 @@
-<
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        #momentumValue {
+            font-size: 24px;
+            color: #2ecc71;
+        }
+
+        #updateButton {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Momentum Tracker</h1>
+    <p>Current Momentum: <span id="momentumValue">0</span></p>
+    <button id="updateButton" onclick="updateMomentum()">Update</button>
+
+    <script>
+        let momentum = 0;
+
+        function updateMomentum() {
+            let randomIncrement = Math.floor(Math.random() * 10) + 1;
+            momentum += randomIncrement;
+            document.getElementById('momentumValue').innerText = momentum;
+        }
+    </script>
+</body>
+
+</html>
+
